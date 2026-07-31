@@ -1,0 +1,69 @@
+#Exercício 1#
+# print("Bem-vindo ao mundo da programação em Python")
+
+
+#Exercício 2#
+# nome= input("Qual seu nome? \n")
+# idade= input("Quantos anos você tem? \n")
+
+# print("Seu nome é:", nome)
+# print("Sua idade é:",idade)
+
+#Exercício 3#
+#A
+# print(135+246)
+# print(512+128)
+# B
+# n1= int(input("Primeiro valor \n"))
+# n2= int(input("Segundo valor\n"))
+# soma= (n1 + n2)
+# print("O resultado é", soma)
+
+#Exercício 4#
+# print(15*8)
+# print(78*3)
+
+#Exercício 5#
+# print(5**3)
+
+#Exercício 6#
+ 
+# nome=str(input("Seu Nome: "))
+# sobrenome=str(input("Seu Sobrenome: "))
+# nomecompleto= (nome +"  "+sobrenome)
+# print("Seu nome completo é: \n", nomecompleto)
+
+# #Exercício 7#
+
+# peçasproduzidas= int(input("Quantas peças foram produzidas? \n"))
+# peçasdefeituosas= int(input("Quantas deram defeito? \n"))
+# peçasboas=(peçasproduzidas-peçasdefeituosas)
+# print( peçasboas , "peças ainda continuam em bom estado")
+# taxa=peçasboas/peçasdefeituosas
+# print("A taxa de aproveitamento foi de: ", taxa)
+# #Exercício 8#
+
+# idadeatual= int(input("Quantos anos vc tem? \n"))
+# print("Daqui 10 anos você terá: ", idadeatual+10 , " anos")
+
+#Exercício 9#
+# custopassagem=float(input("Quanto custa a passagem? \n"))
+# custohotel=float(input("Quanto custa a diária? \n"))
+# dias=int(input("Quantos dias você vai ficar hospedado? \n"))
+# totalhotel=(custohotel*dias)
+# passagem=(custopassagem)
+# totalviagem=(custohotel*dias+custopassagem)
+# print("Seus custos serão: \n Hospedagem: ",totalhotel,"\n Passagem: ",passagem)
+# print("O total que você deverá pagar é de: R$", totalviagem)
+
+#Exercício 10#
+
+# produto=str(input("Qual produto você vende? \n"))
+# quantidade=int(input("Quantas vendas você fez hoje desse produto?\n"))
+# valor1=float(input("Qual valor unitário desse produto?\n"))
+# valortotal=(valor1*quantidade)
+
+# print("Produto: ",produto)
+# print("Quantidade vendida: ",quantidade)
+# print("Preço unitário: R$",valor1)
+# print("Total de vendas: R$",valortotal)
