@@ -1,0 +1,482 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil MS Sans Serif;}{\f1\fnil\fcharset0 MS Sans Serif;}}
+{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\b\f0\fs16 001 - Atributo: \cf2\b0 CNPJ\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o CNPJ da empresa
+\par Nome atributo:CNPJ
+\par Tipo:varchar(18) not null unique
+\par \f0 
+\par \cf1\b 002 - Entidade: \cf2\b0 Clientes\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar os dados dos Clientes
+\par Nome: Clientes
+\par Atributos que fazem parte dessa tabela:
+\par -i d_clientes
+\par - nome_cliente
+\par - telefone
+\par -cpf_cliente
+\par - endereco
+\par - email \f0 
+\par \cf1\b 003 - Observa\f1\'e7\'e3o: \cf2\b0 Documento De Modelagem Conceitual Oficina
+\par Feito por: L\'edvia Stein \cf1\b  \cf0\b0\f0 
+\par \cf1\b 004 - Rela\f1\'e7\'e3o: \cf2\b0 Efetua\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par - Clintres  (0,n)
+\par - Pagamentos (1,1)
+\par Nome: Efetua
+\par 
+\par Os Clientes efetuam os pagamentos
+\par \f0 
+\par \cf1\b 005 - Entidade: \cf2\b0 Fornecedores\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar os dados dos Fornecedores
+\par Nome: Fornecedores
+\par Atributos que fazem parte dessa tabela:
+\par -i d_fornecedores
+\par - nome_empresa
+\par - CNPJ
+\par - email
+\par - local_fornecedor
+\par - telefone \f0 
+\par \cf1\b 006 - Rela\f1\'e7\'e3o: \cf2\b0 Fornecem\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par -  Pe\'e7as (0,n)
+\par - Fornecedores  (0,n)
+\par Nome: fornecem
+\par 
+\par Os Fornecedores fornecem as pe\'e7as
+\par \f0 
+\par \cf1\b 007 - Entidade: \cf2\b0 Funcion\f1\'e1rios\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por armazenar os dados dos Funcion\'e1rios
+\par Nome: Funcionarios
+\par Atributos que fazem parte dessa tabela:
+\par -i d_funcionarios
+\par - cargo
+\par - salario
+\par - setor
+\par - cpf_funcionario
+\par - nome_funcionario \f0 
+\par \cf1\b 008 - Entidade: \cf2\b0 Marcas\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar os dados das Marcas
+\par Nome: Marcas
+\par Atributos que fazem parte dessa tabela:
+\par -i d_marcas
+\par - modelos
+\par - pais_origem
+\par - telefone_sac
+\par - data_fundacao
+\par - site \f0 
+\par \cf1\b 009 - Entidade: \cf2\b0 Modelos\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar os dados dos Modelos
+\par Nome: Modelos
+\par Atributos que fazem parte dessa tabela:
+\par -i d_modelos
+\par - tipo_carro
+\par - cor_veiculo
+\par - ano_fabricacao
+\par - versao_veiculo 
+\par - marca_veiculo \f0 
+\par \cf1\b 010 - Atributo: \cf2\b0 Nao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 011 - Entidade: \cf2\b0 Ordens de Servi\f1\'e7o\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por armazenar os dados das Ordens de Servi\'e7o
+\par Nome: Ordens de Servi\'e7o
+\par Atributos que fazem parte dessa tabela:
+\par -id_ordens
+\par - tipo_servico
+\par - problema
+\par - valor_servico
+\par - funcionario_servico
+\par - descricao
+\par  \f0 
+\par \cf1\b 012 - Entidade: \cf2\b0 Pagamentos\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar os dados dos Pagamentos
+\par Nome: Pagamentos
+\par Atributos que fazem parte dessa tabela:
+\par -i d_pagamento
+\par - forma_pagamento
+\par - valor_total
+\par - data_efetuacao
+\par - status_pagamento
+\par - parcela \f0 
+\par \cf1\b 013 - Rela\f1\'e7\'e3o: \cf2\b0 Pertence\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par - Modelos  (0,n)
+\par - Marcas (1,1)
+\par Nome: Pertence
+\par 
+\par Os modelos pertencem as marcas
+\par \f0 
+\par \cf1\b 014 - Entidade: \cf2\b0 Pe\f1\'e7as \cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por armazenar os dados das Pecas
+\par Nome: Pe\'e7as
+\par Atributos que fazem parte dessa tabela:
+\par -i d_pecas
+\par - tipo_peca
+\par - nome_peca
+\par - valor_peca
+\par - chassi_peca
+\par - quantidade_pecas \f0 
+\par \cf1\b 015 - Rela\f1\'e7\'e3o: \cf2\b0 Possui\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par - Veiculos  (0,n)
+\par - Modelos (1,1)
+\par Nome: Possui
+\par 
+\par Os Veiculos possuem modelos
+\par \f0 
+\par \cf1\b 016 - Rela\f1\'e7\'e3o: \cf2\b0 Realiza\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par - Servi\'e7os  (0,n)
+\par - Funcionarios (0,n)
+\par Nome: Realiza
+\par 
+\par Os Funcionarios realizam os servi\'e7os
+\par \f0 
+\par \cf1\b 017 - Rela\f1\'e7\'e3o: \cf2\b0 Registra\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par - Funcionarios  (0,n)
+\par - Ordens de Servi\'e7os (1,1)
+\par Nome: Registra
+\par 
+\par Os Funcionarios registram as ordens de servicos
+\par \f0 
+\par \cf1\b 018 - Entidade: \cf2\b0 Servi\f1\'e7os\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por armazenar os dados dos Servi\'e7os
+\par Nome: Servi\'e7os
+\par Atributos que fazem parte dessa tabela:
+\par -i d_servicos
+\par - tipo_servi\'e7o
+\par - preco_base
+\par - tempo_trabalho
+\par - local_trabalho
+\par - pecas_usadas \f0 
+\par \cf1\b 019 - Atributo: \cf2\b0 Sim\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 020 - Rela\f1\'e7\'e3o: \cf2\b0 Solicita\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par - Veiculos  (0,n)
+\par - Servi\'e7os (1,1)
+\par Nome: Solicita
+\par 
+\par Os Veiculos solicitam os servi\'e7os
+\par \f0 
+\par \cf1\b 021 - Rela\f1\'e7\'e3o: \cf2\b0 T\'eam\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par - Clientes  (1,1)
+\par - Veiculos (0,n)
+\par Nome: Tem
+\par 
+\par Os Clientes Tem Veiculos
+\par \f0 
+\par \cf1\b 022 - Rela\f1\'e7\'e3o: \cf2\b0 Utiliza\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par -  Servi\'e7os (0,n)
+\par - Pe\'e7as (0,n)
+\par Nome: Utiliza
+\par 
+\par Os Servi\'e7os utilizam as pe\'e7as
+\par \f0 
+\par \cf1\b 023 - Entidade: \cf2\b0 Veiculos\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar os dados dos Ve\'edculos
+\par Nome: Veiculos
+\par Atributos que fazem parte dessa tabela:
+\par -i d_veiculos
+\par - tipo_de_servi\'e7o
+\par - marca
+\par -placa_veiculo
+\par - data_entrada
+\par - ano_veiculo \f0 
+\par \cf1\b 024 - Atributo: \cf2\b0 ano_fabricacao\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o ano de fabricacao do modelo
+\par Nome atributo: ano_fabricacao
+\par Tipo: year
+\par \f0 
+\par \cf1\b 025 - Atributo: \cf2\b0 ano_veiculo\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o ano de fabrica\'e7\'e3o do veiculo
+\par Nome atributo: ano_veiculo
+\par Tipo: year
+\par \f0 
+\par \cf1\b 026 - Atributo: \cf2\b0 cargo\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o cargo do funcionario
+\par Nome atributo: cargo
+\par Tipo: varchar(30)not null
+\par \f0 
+\par \cf1\b 027 - Atributo: \cf2\b0 chassi_peca\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o chassi da peca
+\par Nome atributo: chassi_peca
+\par Tipo: varchar(10) unique
+\par \f0 
+\par \cf1\b 028 - Atributo: \cf2\b0 cor_veiculo\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar as cores de cada modelo
+\par Nome atributo: cor_veiculo
+\par Tipo: varchar(20)
+\par \f0 
+\par \cf1\b 029 - Atributo: \cf2\b0 cpf_cliente\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o cpf dos clientes
+\par Nome atributo: cpf_cliente
+\par Tipo: varchar(11) not null
+\par \f0 
+\par \cf1\b 030 - Atributo: \cf2\b0 cpf_funcionario\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o cpf do funcionario
+\par Nome atributo: cpf_funcionario
+\par Tipo: varchar(11) not null unique
+\par \f0 
+\par \cf1\b 031 - Atributo: \cf2\b0 data_efetuacao\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar a data e hora que foi efetuada o pagamento
+\par Nome atributo: data_efetuacao
+\par Tipo: datetime timestamp
+\par \f0 
+\par \cf1\b 032 - Atributo: \cf2\b0 data_entrada\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar a data que o veiculo deu entrada na oficina
+\par Nome atributo: data_entrada
+\par Tipo: datetime
+\par \f0 
+\par \cf1\b 033 - Atributo: \cf2\b0 data_fundacao\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar a data que a marca foi fundada
+\par Nome atributo: data_fundacao
+\par Tipo:date
+\par \f0 
+\par \cf1\b 034 - Atributo: \cf2\b0 descricao\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar a descri\'e7\'e3o do servi\'e7o
+\par Nome atributo: descricao
+\par Tipo:varchar(100)
+\par \f0 
+\par \cf1\b 035 - Atributo: \cf2\b0 email\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o email da empresa
+\par Nome atributo:email
+\par Tipo:varchar(100)
+\par \f0 
+\par \cf1\b 036 - Atributo: \cf2\b0 email\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o email de cadastro do cliente
+\par Nome atributo: email
+\par Tipo: varchar(100)
+\par \f0 
+\par \cf1\b 037 - Atributo: \cf2\b0 endereco\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o endereco do cliente
+\par Nome atributo: endereco
+\par Tipo:varchar(100)
+\par \f0 
+\par \cf1\b 038 - Atributo: \cf2\b0 forma_pagamento\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar a forma de pagamento
+\par Nome atributo: forma_pagamento
+\par Tipo: varchar(20)
+\par \f0 
+\par \cf1\b 039 - Atributo: \cf2\b0 funcionario_servico\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o nome do funcionario que fara aquele servi\'e7o
+\par Nome atributo: funcionario_servico
+\par Tipo: varchar (80)
+\par \f0 
+\par \cf1\b 040 - Atributo: \cf2\b0 id_clientes\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id do cliente
+\par Nome atributo: id_cliente
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 041 - Atributo: \cf2\b0 id_fornecedores\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id do fornecedor
+\par Nome atributo: id_fornecedores
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 042 - Atributo: \cf2\b0 id_funcionarios\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id do funcionario
+\par Nome atributo: id_funcionario
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 043 - Atributo: \cf2\b0 id_marcas\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id da marca
+\par Nome atributo: id_marca
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 044 - Atributo: \cf2\b0 id_modelos\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id do modelo
+\par Nome atributo: id_modelos
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 045 - Atributo: \cf2\b0 id_ordens\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id das ordens de servicos
+\par Nome atributo: id_ordens
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 046 - Atributo: \cf2\b0 id_pagamento\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id do  pagamento
+\par Nome atributo: id_pagamento
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 047 - Atributo: \cf2\b0 id_pecas\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id da pe\'e7a
+\par Nome atributo: id_peca
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 048 - Atributo: \cf2\b0 id_servicos\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id do servico
+\par Nome atributo: id_servico
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 049 - Atributo: \cf2\b0 id_veiculos\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id do veiculo
+\par Nome atributo: id_veiculos
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 050 - Atributo: \cf2\b0 local_fornecedor\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o local da empresa
+\par Nome atributo:local_fornecedor
+\par Tipo:varchar(80)
+\par \f0 
+\par \cf1\b 051 - Atributo: \cf2\b0 local_trabalho\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o local da oficina que realiza esse tipo de servico
+\par Nome atributo: local_trabalho
+\par Tipo:varchar(100)
+\par \f0 
+\par \cf1\b 052 - Atributo: \cf2\b0 marca\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar a marca do veiculo
+\par Nome atributo: marca
+\par Tipo: varchar(20)
+\par \f0 
+\par \cf1\b 053 - Atributo: \cf2\b0 marca_veiculo\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar a marca daquele modelo
+\par Nome atributo: marca_veiculo
+\par Tipo: varhar(30) \f0 
+\par \cf1\b 054 - Atributo: \cf2\b0 modelos\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar os modelos que a marca possui
+\par Nome atributo: modelos
+\par Tipo: varchar(50)
+\par \f0 
+\par \cf1\b 055 - Atributo: \cf2\b0 nome_cliente\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o nome dos clientes
+\par Nome atributo: nome_cliente
+\par Tipo:varchar(60)
+\par \f0 
+\par \cf1\b 056 - Atributo: \cf2\b0 nome_empresa\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o nome da empresa
+\par Nome atributo: nome_empresa
+\par Tipo: varchar(80)
+\par \f0 
+\par \cf1\b 057 - Atributo: \cf2\b0 nome_funcionario\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o nome do funcionario
+\par Nome atributo: nome_funcionario
+\par Tipo: varchar(80) not null unique
+\par \f0 
+\par \cf1\b 058 - Atributo: \cf2\b0 nome_peca\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o nome da peca
+\par Nome atributo: nome_peca
+\par Tipo: varchar(60)
+\par \f0 
+\par \cf1\b 059 - Atributo: \cf2\b0 pais_origem\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o pais que a marca fabrica
+\par Nome atributo: pais_origem
+\par Tipo: varchar(20)
+\par \f0 
+\par \cf1\b 060 - Atributo: \cf2\b0 parcela\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar se o valor sera ou nao parcelado
+\par Nome atributo: parcela
+\par Tipo: char(3) default "Nao"
+\par \f0 
+\par \cf1\b 061 - Atributo: \cf2\b0 pecas_usadas\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar quais pecao s\'e3o usadas nos servi\'e7os
+\par Nome atributo: pecas_usadas
+\par Tipo:varchar(100)
+\par \f0 
+\par \cf1\b 062 - Atributo: \cf2\b0 placa_veiculo\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar a placa do veiculo
+\par Nome atributo: placa_veiculo
+\par Tipo: varchar(7) not null
+\par \f0 
+\par \cf1\b 063 - Atributo: \cf2\b0 preco_base\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o valor base de cada servi\'e7o
+\par Nome atributo: preco_base
+\par Tipo:decimal(10,2)
+\par \f0 
+\par \cf1\b 064 - Atributo: \cf2\b0 problema\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar a descri\'e7\'e3o do problema que o veiculo possui
+\par Nome atributo: problema
+\par Tipo: varchar(255)
+\par \f0 
+\par \cf1\b 065 - Atributo: \cf2\b0 quantidade_pecas\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar a quantidade das pecas
+\par Nome atributo: quantidade_pecas
+\par Tipo: int
+\par \f0 
+\par \cf1\b 066 - Atributo: \cf2\b0 salario\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o salario dos funcionbarios
+\par Nome atributo: salario
+\par Tipo: decimal(10,2)
+\par \f0 
+\par \cf1\b 067 - Atributo: \cf2\b0 setor\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o setor onde o funcionario atua
+\par Nome atributo: setor
+\par Tipo: varchar(30)
+\par \f0 
+\par \cf1\b 068 - Atributo: \cf2\b0 site\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o site da marca
+\par Nome atributo: site
+\par Tipo: varchar(255)
+\par \f0 
+\par \cf1\b 069 - Atributo: \cf2\b0 status_pagamento\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar como esta do pagamento, ex: foi efetuado, nao foi, etc
+\par Nome atributo: status_pagamento
+\par Tipo: varchar(20)
+\par \f0 
+\par \cf1\b 070 - Atributo: \cf2\b0 telefone\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o telefone da empresa
+\par Nome atributo: telefone
+\par Tipo:varchar(15)
+\par \f0 
+\par \cf1\b 071 - Atributo: \cf2\b0 telefone\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o telefone do cliente
+\par Nome atributo: telefone
+\par Tipo: varchar(15)
+\par \f0 
+\par \cf1\b 072 - Atributo: \cf2\b0 telefone_sac\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o telefone SAC de marca
+\par Nome atributo: telefone_sac
+\par Tipo: varchar(15)
+\par \f0 
+\par \cf1\b 073 - Atributo: \cf2\b0 tempo_trabalho\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o temopo que leva para realizar um servico
+\par Nome atributo: tempo_trabalho
+\par Tipo:time
+\par \f0 
+\par \cf1\b 074 - Atributo: \cf2\b0 tipo_carro\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o tipo de modelo que \'e9, ex: sedan, ret, SUV, etc.
+\par Nome atributo: tipo_carro
+\par Tipo: varchar(20)
+\par \f0 
+\par \cf1\b 075 - Atributo: \cf2\b0 tipo_de_servico\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o tipo de servico que sera feito no veiculo
+\par Nome atributo: tipo_de_servico
+\par Tipo: varchar(80)
+\par \f0 
+\par \cf1\b 076 - Atributo: \cf2\b0 tipo_peca\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o tipo da peca 
+\par Nome atributo: tipo_peca
+\par Tipo: varchar(60)
+\par \f0 
+\par \cf1\b 077 - Atributo: \cf2\b0 tipo_servico\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o tipo de cervi\'e7o que sera feito no carro
+\par Nome atributo: tipo_servico
+\par Tipo:varchar(100)
+\par \f0 
+\par \cf1\b 078 - Atributo: \cf2\b0 tipo_servico\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o tipo do servico para ser feito
+\par Nome atributo: tipo_servico
+\par Tipo:varchar(100)
+\par \f0 
+\par \cf1\b 079 - Atributo: \cf2\b0 valor_peca\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o valor de cada peca
+\par Nome atributo: valor_peca
+\par Tipo: decimal(6,2)
+\par \f0 
+\par \cf1\b 080 - Atributo: \cf2\b0 valor_servico\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o valor dos servicos
+\par Nome atributo: valor_servico 
+\par Tipo: decimal(10,2) \f0 
+\par \cf1\b 081 - Atributo: \cf2\b0 valor_total\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o valor total do servico
+\par Nome atributo: valor_total
+\par Tipo: decimal(10,2)
+\par \f0 
+\par \cf1\b 082 - Atributo: \cf2\b0 versao_veiculo\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar a versao do veiculo, ex: Automatico, manual, eletrico
+\par Nome atributo: versao_veiculo
+\par Tipo: varchar(30)
+\par \f0 
+\par 
+\par }
+ 

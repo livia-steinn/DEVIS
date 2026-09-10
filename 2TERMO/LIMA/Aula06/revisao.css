@@ -1,0 +1,42 @@
+body {
+    background-color: whitesmoke;
+}
+header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: gainsboro;
+    text-align: center;
+    ba
+}
+nav a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.bemvindo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: gainsboro;
+    margin: 30px;
+}
+.tecnologia {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: gainsboro;
+    margin: 30px;
+}
+img{
+    height: 550px;
+    width: 550px;
+    position: relative;
+    top: 10px;
+    left: 7px;
+    margin: auto;
+}
+footer {
+    background-color: gainsboro;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+}
