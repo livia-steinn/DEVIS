@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(206, 204, 204);
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(11, 11, 56, 0.932);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+main {
+    margin: 30px;
+}
+
+section {
+    border-width: 30px ;
+    border: 30px solid #1e3a5f;
+    border-color: #1e3a5f;
+    padding: 20px;
+}
+
+.servicos {
+    margin: 20px;
+    padding: 15px;
+    background-color: aliceblue;
+    border: 10px solid aliceblue;
+}
+
+
+
