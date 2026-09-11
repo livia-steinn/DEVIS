@@ -8,5 +8,23 @@
 // ☐ Chamar as duas funções.
 // ☐ Exibir produção prevista, produção real, percentual e classificação.
 
-function calcularEficiencia(real, prevista)
-    return 
+function calcularEficiencia(real, prevista) {
+    return (real/prevista) * 100
+}
+
+function classificarEficiencia(percentual) {
+    if(percentual > 90){
+        return "META ATINGIDA!"
+    }
+    else if (percentual < 90 && percentual> 70){
+        return "ATENCAO"
+    }
+    else{
+        return "ABAIXO DA META"
+    }
+}
+
+module.exports = {
+    calcularEficiencia,
+    classificarEficiencia
+}
