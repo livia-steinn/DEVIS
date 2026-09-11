@@ -8,6 +8,7 @@
 // ☐ Exibir a temperatura e a classificação.
 
 entrada = require("readline-sync");
+console.log(`----- CONTROLE DE TEMPERATURA -----`);
 
 const temp = entrada.questionFloat("Digite a temperatura da maquina: ");
 

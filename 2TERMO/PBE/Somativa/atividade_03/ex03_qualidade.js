@@ -9,6 +9,7 @@
 
 
 entrada = require("readline-sync");
+console.log(`----- CONTROLE DE PESO -----`);
 
 const pesoPeca = entrada.questionFloat("Digite o peso da peca em gramas: ");
 

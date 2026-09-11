@@ -7,7 +7,10 @@
 // ☐ Não escrever manualmente as dez linhas.
 
 entrada = require("readline-sync");
+console.log(`----- SEPARACAO DE CICLOS -----`);
 
 const qtdPecas = entrada.question("Digite a quatidade de pecas a maquina produz por ciclo: ")
 
-for (let i = 0, )
+for (let i = 1; i <= 10; i++){
+    console.log(`${i}° Ciclo ${qtdPecas*i} produzida `)
+}

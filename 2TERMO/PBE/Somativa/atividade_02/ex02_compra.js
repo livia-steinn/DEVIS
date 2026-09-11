@@ -9,6 +9,7 @@
 // ☐ Exibir um pequeno resumo da compra.
 
 entrada = require("readline-sync");
+console.log(`----- CALCULO DE MATERIAIS -----`);
 
 const nome = entrada.question("Digite o nome do material: ");
 const qtd = entrada.questionInt("Digite a quantidade de materiais comprada: ");
@@ -20,4 +21,4 @@ console.log(`----- RESULTADO -----`);
 console.log(`Material: ${nome}`);
 console.log(`Quantidade: ${qtd}`);
 console.log(`Preco unitario: ${preco}`);
-console.log(`Total a pagar: R$ ${total}`);
+console.log(`Total a pagar: R$ ${total.toFixed(2)}`);
