@@ -47,5 +47,33 @@ FOREIGN KEY(id_produto) REFERENCES Produto (id_produto),
 FOREIGN KEY(id_fornecedor) REFERENCES Fornecedor (id_fornecedor)
 )
 
+--desafios
+-- 1 --
+-- Uma categoria pode possuir vários produtos. Cada produto pertence a apenas uma categoria.
 
+-- categoria possui produtos
+-- categoria 1,n -- produtos 1,1
 
+-- 2 --
+-- Um funcionário pode registrar vários pedidos. Cada pedido é registrado por um funcionário.
+
+-- funcionario registra pedidos
+-- funcionario 1,n -- pedidos 1,1
+
+--3 --
+-- Um fornecedor comercializa vários produtos, e o mesmo produto pode ser comprado de vários fornecedores.
+
+-- fornecedor fornece produtos
+-- fornecedor 1,n -- produtos 1,n
+
+-- 4 --
+-- Uma mesa pode existir sem nenhuma reserva futura. Uma reserva deve estarvinculada a uma mesa.
+
+-- cliente reserva mesa
+-- cliente 0,n -- reservas 1,1
+
+--5--
+-- Um pedido possui vários itens. Um item de pedido pertence a um único pedido.
+
+-- pedido possui item_pedido
+-- pedido 1,n -- itens 1,1
