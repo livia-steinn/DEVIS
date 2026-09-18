@@ -1,0 +1,347 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil MS Sans Serif;}{\f1\fnil\fcharset0 MS Sans Serif;}}
+{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\b\f0\fs16 001 - Atributo: \cf2\b0 CNPJ\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 002 - Atributo: \cf2\b0 CPF\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 003 - Entidade: \cf2\b0 Categorias\cf1\b 
+\par \cf0\b0 Nome: Categorias
+\par Atributos que fazem parte dessa tabela:
+\par -i d_categoria
+\par - estilo_produto
+\par - descricao
+\par -tipo_produto
+\par - nome_categoria
+\par - setor_preparo
+\par 
+\par \cf1\b 004 - Entidade: \cf2\b0 Clientes\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar os dados dos Clientes
+\par Nome: Clientes
+\par Atributos que fazem parte dessa tabela:
+\par -i d_clientes
+\par - nome
+\par - telefone
+\par -cpf
+\par - data_cadastro
+\par - email
+\par - data_nascimento
+\par \f0 
+\par \cf1\b 005 - Entidade: \cf2\b0 Delivery\cf1\b 
+\par \cf0\b0 Nome: Delivery
+\par Atributos que fazem parte dessa tabela:
+\par -i d_delivery
+\par - forma_pagamento
+\par - taxa_valor
+\par -valor_compra
+\par - status_entrega
+\par - data_hora_saida
+\par -endereco_entrega
+\par 
+\par \cf1\b 006 - Atributo: \cf2\b0 Email\cf1\b 
+\par \cf0\b0 Email do cliente 
+\par tipo: varchar(100) 
+\par 
+\par \cf1\b 007 - Rela\f1\'e7\'e3o: \cf2\b0 Entrega\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par - Funcionarios  (0,n)
+\par - Delivery (0,n)
+\par Nome: Entrega
+\par 
+\par - Funcionaros entregam os deliverys
+\par \f0 
+\par \cf1\b 008 - Entidade: \cf2\b0 Estoque\cf1\b 
+\par \cf0\b0 Nome: Estoque
+\par Atributos que fazem parte dessa tabela:
+\par -i d_estoque
+\par - nome_insumo
+\par - estoque_minimo
+\par -data_ultima_reposicao
+\par - quantidade_atual
+\par - unidade_medida
+\par -status_estoque
+\par 
+\par \cf1\b 009 - Entidade: \cf2\b0 Fornecedor\cf1\b 
+\par \cf0\b0 Nome: Fornecedor
+\par Atributos que fazem parte dessa tabela:
+\par -i d_fornecedor
+\par - CNPJ
+\par - telefone
+\par -nome_empresa
+\par - email
+\par - cidade
+\par 
+\par \cf1\b 010 - Entidade: \cf2\b0 Funcionarios\cf1\b 
+\par \cf0\b0 Nome: Funcionarios
+\par Atributos que fazem parte dessa tabela:
+\par -id_funcionario
+\par - salario
+\par - cpf_funcionario
+\par -nome
+\par - cargo
+\par - data_admissao
+\par 
+\par \cf1\b 011 - Atributo: \cf2\b0 ID_categoria\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id da categoria
+\par Nome atributo: id_categoria
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 012 - Atributo: \cf2\b0 ID_cliente\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id do cliente
+\par Nome atributo: id_cliente
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 013 - Atributo: \cf2\b0 ID_delivery\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id do delivery
+\par Nome atributo: id_delivery
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 014 - Atributo: \cf2\b0 ID_estoque\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id do estoque
+\par Nome atributo: id_estoque
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 015 - Atributo: \cf2\b0 ID_fidelidade\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id do programa de fidelidade
+\par Nome atributo: id_fidelidade
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 016 - Atributo: \cf2\b0 ID_fornecedor\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id do fornecedor
+\par Nome atributo: id_fornecedor
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 017 - Atributo: \cf2\b0 ID_funcionario\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id do funcionario
+\par Nome atributo: id_funcionario
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 018 - Atributo: \cf2\b0 ID_pagamento\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id do pagamento
+\par Nome atributo: id_pagamento
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 019 - Atributo: \cf2\b0 ID_pedido\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id do pedido
+\par Nome atributo: id_pedido
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 020 - Atributo: \cf2\b0 ID_produto\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar o id do produto
+\par Nome atributo: id_produto
+\par Tipo: int auto_increment primary key
+\par \f0 
+\par \cf1\b 021 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 022 - Entidade: \cf2\b0 Pagamento\cf1\b 
+\par \cf0\b0 Nome: Pagamento
+\par Atributos que fazem parte dessa tabela:
+\par -i d_pagamento
+\par - status_pagamento
+\par - forma_de_pagamento
+\par -valor_pago
+\par - data_hora_pagamento 
+\par \cf1\b 023 - Entidade: \cf2\b0 Pedido\cf1\b 
+\par \cf0\b0 Nome: Pedido
+\par Atributos que fazem parte dessa tabela:
+\par -i d_pedido
+\par - local_consumo
+\par - tipo_pedido
+\par -valor_total
+\par - data_hora
+\par - status_pedido
+\par 
+\par \cf1\b 024 - Entidade: \cf2\b0 Produtos\cf1\b 
+\par \cf0\b0 Nome: Produtos
+\par Atributos que fazem parte dessa tabela:
+\par -i d_produto
+\par - vencimento
+\par - preco_unitario
+\par -descricao
+\par - quantidade
+\par - categoria
+\par -nome_produto
+\par 
+\par \cf1\b 025 - Entidade: \cf2\b0 Prog. de fidelidade\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por armazenar os dados dos Clientes
+\par Nome: Prog. de fidelidade
+\par Atributos que fazem parte dessa tabela:
+\par -i d_fidelidade
+\par - saldo_pontos
+\par - data_ultima_atualizacao
+\par -nivel_cliente
+\par - status_cartao
+\par - quantidade_pedidos
+\par \f0 
+\par \cf1\b 026 - Atributo: \cf2\b0 Telefone\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 027 - Rela\f1\'e7\'e3o: \cf2\b0 agrupa\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par - Produtos  (0,n)
+\par - Categotias (1,1)
+\par Nome: agrupa
+\par 
+\par - Produtos agrupam Categorias
+\par \f0 
+\par \cf1\b 028 - Rela\f1\'e7\'e3o: \cf2\b0 atende\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par - Pedido  (0,n)
+\par - Funcionarios (0,n)
+\par Nome: Atende
+\par 
+\par - Os funcionarios atendem os pedidos 
+\par \f0 
+\par \cf1\b 029 - Atributo: \cf2\b0 cargo\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 030 - Atributo: \cf2\b0 categoria\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 031 - Atributo: \cf2\b0 cidade\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 032 - Rela\f1\'e7\'e3o: \cf2\b0 consome\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par - Produtos  (0,n)
+\par - Estoque (1,n)
+\par Nome: Consome
+\par 
+\par - Produtos consomem o estoque
+\par \f0 
+\par \cf1\b 033 - Rela\f1\'e7\'e3o: \cf2\b0 contem\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par - Pedios  (1,n)
+\par - Produtos (1,n)
+\par Nome: Contem
+\par 
+\par - Pedidos contem Produtos
+\par \f0 
+\par \cf1\b 034 - Atributo: \cf2\b0 cpf_funcionario\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 035 - Atributo: \cf2\b0 data_adimissao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 036 - Atributo: \cf2\b0 data_cadastro\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 037 - Atributo: \cf2\b0 data_hora\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 038 - Atributo: \cf2\b0 data_hora_pagamento\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 039 - Atributo: \cf2\b0 data_hora_saida\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 040 - Atributo: \cf2\b0 data_nascimento\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 041 - Atributo: \cf2\b0 data_ultima_atualizacao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 042 - Atributo: \cf2\b0 data_ultima_reposicao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 043 - Atributo: \cf2\b0 descricao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 044 - Atributo: \cf2\b0 descricao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 045 - Atributo: \cf2\b0 email\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 046 - Atributo: \cf2\b0 endereco_entrega\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 047 - Atributo: \cf2\b0 estilo_produto\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 048 - Atributo: \cf2\b0 estoque_minimo\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 049 - Atributo: \cf2\b0 forma_de_pagamento\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 050 - Atributo: \cf2\b0 forma_de_pagamento\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 051 - Rela\f1\'e7\'e3o: \cf2\b0 fornece\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par - Estoque  (1,1)
+\par - Fornecedor (0,n)
+\par Nome: fornece
+\par 
+\par - Fornecedores fornecem o estoque
+\par \f0 
+\par \cf1\b 052 - Rela\f1\'e7\'e3o: \cf2\b0 gera\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par - Pedido  (0,1)
+\par - Delivery (0,1)
+\par Nome: Gera
+\par 
+\par - Os pedidos geram delivery 
+\par \f0 
+\par \cf1\b 053 - Atributo: \cf2\b0 local_consumo\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 054 - Atributo: \cf2\b0 nivel_cliente\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 055 - Atributo: \cf2\b0 nome\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 056 - Atributo: \cf2\b0 nome_categoria\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 057 - Atributo: \cf2\b0 nome_empresa\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 058 - Atributo: \cf2\b0 nome_insumo\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 059 - Atributo: \cf2\b0 nome_produto\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 060 - Rela\f1\'e7\'e3o: \cf2\b0 participa\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par - Clientes  (1,1)
+\par - Prog. de fidelidade (1,1)
+\par Nome: Participa
+\par 
+\par - Os Clientes participam dos programas de fidelidade
+\par \f0 
+\par \cf1\b 061 - Rela\f1\'e7\'e3o: \cf2\b0 possui\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par - Pedido  (1,1)
+\par - Pagamento(1,1)
+\par Nome: Possui
+\par 
+\par - Pedidos possuem pagamentos
+\par \f0 
+\par \cf1\b 062 - Atributo: \cf2\b0 preco_unitario\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 063 - Atributo: \cf2\b0 quantidade\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 064 - Atributo: \cf2\b0 quantidade_atual\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 065 - Atributo: \cf2\b0 quantidade_pedidos\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 066 - Rela\f1\'e7\'e3o: \cf2\b0 realiza\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por relacionar as entidades:
+\par - Clientes  (0,n)
+\par - Pedido (0,n)
+\par Nome:Realiza
+\par 
+\par Os Clientes realizam pedidos
+\par \f0 
+\par \cf1\b 067 - Atributo: \cf2\b0 salario\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 068 - Atributo: \cf2\b0 saldo_pontos\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 069 - Atributo: \cf2\b0 setor_preparo\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 070 - Atributo: \cf2\b0 status_cartao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 071 - Atributo: \cf2\b0 status_entrega\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 072 - Atributo: \cf2\b0 status_estoque\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 073 - Atributo: \cf2\b0 status_pagamento\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 074 - Atributo: \cf2\b0 status_pedido\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 075 - Atributo: \cf2\b0 taxa_valor\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 076 - Atributo: \cf2\b0 telefone\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 077 - Atributo: \cf2\b0 tipo_pedido\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 078 - Atributo: \cf2\b0 tipo_produto\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 079 - Atributo: \cf2\b0 unidade_medida\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 080 - Atributo: \cf2\b0 valor_compra\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 081 - Atributo: \cf2\b0 valor_pago\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 082 - Atributo: \cf2\b0 valor_total\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 083 - Atributo: \cf2\b0 vencimento\cf1\b 
+\par \cf0\b0 
+\par 
+\par }
+ 
