@@ -15,38 +15,18 @@ const entrada = require('readline-sync');
 function calcularArea (largura,comprimento) {
     return largura * comprimento
 }
-// const largura1 = entrada.questionFloat("Digite a largura do primeiro terreno: ");
-// const largura2 = entrada.questionFloat("Digite a largura do segundo terreno: ");
-// const largura3 = entrada.questionFloat("Digite a largura do terceiro terreno: ");
+const largura1 = entrada.questionFloat("Digite a largura do primeiro terreno: ");
+const largura2 = entrada.questionFloat("Digite a largura do segundo terreno: ");
+const largura3 = entrada.questionFloat("Digite a largura do terceiro terreno: ");
 
-// const comprimento1 = entrada.questionFloat("Digite o comprimento do primeiro terreno: ");
-// const comprimento2 = entrada.questionFloat("Digite o comprimento do segundo terreno: ");
-// const comprimento3 = entrada.questionFloat("Digite o comprimento do terceiro terreno: ");
+const comprimento1 = entrada.questionFloat("Digite o comprimento do primeiro terreno: ");
+const comprimento2 = entrada.questionFloat("Digite o comprimento do segundo terreno: ");
+const comprimento3 = entrada.questionFloat("Digite o comprimento do terceiro terreno: ");
 
-// const areatotal1 = largura1 * comprimento1
-// const areatotal2 = largura2 * comprimento2
-// const areatotal3 = largura3 * comprimento3
+const areatotal1 = largura1 * comprimento1
+const areatotal2 = largura2 * comprimento2
+const areatotal3 = largura3 * comprimento3
 
-// console.log(`Area do primeiro terreno ${areatotal1}`);
-// console.log(`Area do primeiro terreno ${areatotal2}`);
-// console.log(`Area do primeiro terreno ${areatotal3}`);
-
-//////////////////////////////////////////////////////////// OU ////////////////////////////////////////////////////////////////////////////////////
-
-// for(let i =1; i<4; i++) {
-//     let largura = entrada.questionFloat(`Digite a largura do terreno ${i}: `);
-
-//     let comprimento = entrada.questionFloat(`Digite o comprimento do terreno ${i}: `);
-
-//     let area = calcularArea(largura,comprimento)
-
-//     console.log(`O terreno ${i} tem area de ${area} metros quadrados`);
-// }
-
-
-
-
-
-
-
-
+console.log(`Area do primeiro terreno ${areatotal1}`);
+console.log(`Area do primeiro terreno ${areatotal2}`);
+console.log(`Area do primeiro terreno ${areatotal3}`);

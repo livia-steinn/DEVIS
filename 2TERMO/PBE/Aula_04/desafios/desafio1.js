@@ -14,14 +14,13 @@
 const entrada = require("readline-sync");
 
 console.log("=== VERIFICADOR DE APOSENTADORIA ===");
-const nome = entrada.question("Digite o seu nome: ");
 const idade = entrada.questionInt("Digite a sua idade: ");
 const tempo_contribuicao = entrada.questionInt("Digite quanto tempo de contribuicao em anos voce possui: ");
 
 if (idade >= 65 || tempo_contribuicao >= 30) {
-    console.log(`O trabalhador ${nome} ja pode aposentar!`)
+    console.log(`Voce ja pode aposentar!`)
 } else{
-    console.log(`O trabalhador ${nome} ainda nao pode aposentar`)
+    console.log(`Voce ainda nao pode aposentar`)
 }
 
 
