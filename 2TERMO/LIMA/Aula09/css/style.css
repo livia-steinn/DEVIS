@@ -65,7 +65,79 @@ nav a {
     background-color: #FFF9F3;
     padding: 20px;
     margin: 0;
+    text-align: right;
 }
-#imagemSobre{
+
+
+#imagemSobre img{
+    width: 400px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#sobre a {
+    background-color: #C66A1A;
+    color: #FFF9F3;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 15px;
+    padding: 15px;
+    display: inline-block;
+}
+
+#produtos{
+    margin: 0;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color:#F3E6D7;
+    padding: 4px;
+    
+}
+
+.capuccino {
+    width: 250px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+ 
+.cafegelado{
+    width: 250px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.chocolate{
+    width: 250px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.lista-cafe a {
+    background-color: #C66A1A;
+    color: #FFF9F3;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 15px;
+    padding: 12px;
+    display: inline-block;
+    
+}
+
+.lista-cafe{
+    list-style: none;
+    background-color: #FFF9F3;
+    display: inline-block;
+    padding: 15px;
+    display: flex ;
+    flex-wrap: nowrap;
+}
+
+.card-cafe {
+    padding: 8px;
+    flex-direction: row;
     
 }
