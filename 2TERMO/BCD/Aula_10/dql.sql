@@ -198,6 +198,25 @@ select id_categoria, count(*) as qtde_produtos
 from produto
 GROUP BY id_categoria; - quantidade de produtos por categoria
 
+-- ex16: having - criar condicoes em agrupamentos
+-- where filtra linhas antes do agrupamento
+-- having filtra linhas depois do group by
+select cidade, count(*) as qtde_clientes
+from clientes
+GROUP BY cidade
+HAVING COUNT(*) >=2; -- consulta para cidades com pelo menos dois clientes
+
+-- ex17: resumo de uma consulta completa
+
+--SELECT colunas
+--FROM tabela
+--WHERE condicao
+--GROUP BY colunas_agrupar
+--HAVING condicao_agrupar
+--ORDER BY colunas
+--LIMIT quantidade;
+
+
 
 
 
