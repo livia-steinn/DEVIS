@@ -1,0 +1,338 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(0, 0, 0);
+    color: rgb(250, 250, 249);
+    font-family: "Poppins", sans-serif;
+    margin:0;
+    padding: 0;
+    line-height: 1.6;
+}
+.cabecalho{
+    background-color: black;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.cabecalho li{
+    display: flex;
+    gap: 23px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+.cabecalho i{
+    color: deeppink;
+}
+.botao-sobre{
+    border: 1px solid deeppink;
+    border-radius: 25px;
+}
+
+.inicio-conteudo{
+    background-image: linear-gradient(to right, #0a001a, #04384d);
+    text-decoration: none;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+}
+.p{
+    color: aqua;
+    font-family: monospace;
+}
+.inicio-conteudo h1{
+    font-size: 2.50rem;
+    line-height: 1.3;
+}
+.inicio-conteudo a{
+    color: white;
+    text-decoration: none;
+    background-color: deeppink;
+    padding: 15px;
+    border-radius: 15px;
+}
+#imagem img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 24px -8px rgb(255, 0, 149);
+    justify-content: flex-end;
+}
+
+.classicos-conteudo{
+    background-image: linear-gradient(to right,#04384d, #0a001a );
+    padding: 10px;
+}
+
+.lista-classicos {
+    list-style: none;
+    padding: 0;
+    margin: 30px auto 0 auto; 
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+.cards-classicos {
+    background-color: rgb(7, 3, 48) ;
+    box-shadow: 0 10px 24px -8px rgba(15,23,42,.35);
+    padding: 5px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(58, 188, 197, 0.397); 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 100%; 
+}
+.lista-classicos p{
+    color: gold;
+    font-family: monospace;
+}
+.lista-classicos h3{
+    font-size: 1.50rem;
+}
+.classicos-conteudo h2{
+    font-size: 2rem;
+    line-height: 1.3;
+}
+.cavaleirosZodiaco {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.herois-conteudo{
+    background-image: linear-gradient(to right, #0a001a, #04384d);
+    text-decoration: none;
+    padding: 25px;
+    
+}
+.faixa{
+    color: aqua;
+    font-family: monospace;
+} 
+.lista-herois{
+    list-style: none;
+    padding: 0;
+    margin: 30px auto 0 auto; 
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+.card-herois{
+    background-color: rgb(7, 3, 48) ;
+    box-shadow: 0 10px 24px -8px rgba(15,23,42,.35);
+    padding: 5px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(58, 188, 197, 0.397); 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 100%; 
+}
+
+.herois-cabecalho{
+    text-align: center;
+}
+ .lista-herois p{
+    color: gold;
+    font-family: monospace;
+}
+
+.lista-herois h3{
+    font-size: 1.50rem;
+}
+.herois-conteudo h2{
+    font-size: 2rem;
+    line-height: 1.3;
+} 
+
+.hoje-conteudo{
+    background-image: linear-gradient(to right,#04384d, #0a001a );
+    padding: 10px;
+    
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cards-hoje {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex: 1;
+}
+
+.cards02-hoje {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex: 1;
+}
+
+.cards-hoje img {
+  width: 350px;
+}
+.cards02-hoje img {
+  width: 350px;
+  display: flex;
+  justify-content: flex-end;
+}
+.img-simpsons {
+  order: 2;
+}
+
+.sobre-conteudo{
+    background-image: linear-gradient(to right,#150e7e, #c5119e );
+    padding: 18px;
+    text-align: center;
+}
+.sobre-conteudo h4{
+    color:gold;
+    font-family: monospace;
+}
+.sobre-conteudo h1{
+    font-size: 4rem;
+    line-height: 1.0;
+}
+.sobre-conteudo a{
+    line-height: 3;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(255, 217, 0, 0.589);
+    padding: 13px;
+    border-radius: 15px;
+}
+
+.rodape header{
+background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+.rodape h2{
+    text-align: left;
+}
+.rodape i{
+    color: deeppink;
+}
+
+.rodape p{
+    text-align: center;
+    margin: 5px 0;
+    font-size: 0.8rem;
+}
+
+.rodape a {
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.img-gravity {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    display: flex;
+}
+.img-simpsons {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    display: flex;
+}
+.img-xmen {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    display: flex;
+}
+.img-kamen {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    display: flex;
+}
+.img-jaspion {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    display: flex;
+}
+.img-jiraya {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    display: flex;
+}
+.img-gravity {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    display: flex;
+}
+.cavernaDragao {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    display: flex;
+}
+.hoje-conteudo li{
+    background-color: #05263b;
+    border-radius: 15px
+}
+.hoje-textos h1{
+    color: #ebe70c;
+}
+.hoje-textos p{
+    color: #11aac5;
+    font-family: monospace;
+    font-size: 1.05rem;
+}
+.imagem-cabecalho{
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+.
