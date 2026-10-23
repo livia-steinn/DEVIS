@@ -38,12 +38,21 @@ nav a {
     text-decoration: none;
     padding: 20px;
 }
+nav a:hover {
+    color: deeppink;
+    transform: translateY(-2px);
+}
 .cabecalho i{
     color: deeppink;
 }
 .botao-sobre{
     border: 1px solid deeppink;
     border-radius: 25px;
+}
+.botao-sobre:hover {
+    background-color: deeppink;
+    color: white;
+    box-shadow: 0 0 15px deeppink;
 }
 
 .inicio-conteudo{
@@ -67,7 +76,19 @@ nav a {
     background-color: deeppink;
     padding: 15px;
     border-radius: 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
+
+.inicio-conteudo a:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 20px #ff149799;
+}
+
+.inicio-conteudo a:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
 #imagem img {
     width: 100%;
     max-width: 600px;
@@ -77,12 +98,17 @@ nav a {
     box-shadow: 0 10px 24px -8px rgb(255, 0, 149);
     justify-content: flex-end;
 }
+#imagem img:hover {
+    box-shadow: 0 12px 28px -4px rgb(255, 0, 149);
+}
 
 .classicos-conteudo{
     background-image: linear-gradient(to right,#04384d, #0a001a );
     padding: 10px;
 }
-
+.titulo-classicos{
+    margin: 30px;
+}
 .lista-classicos {
     list-style: none;
     padding: 0;
@@ -121,6 +147,10 @@ nav a {
     object-fit: cover;
     border-radius: 15px;
 }
+.cards-classicos:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(58, 188, 197, 0.6);
+}
 .herois-conteudo{
     background-image: linear-gradient(to right, #0a001a, #04384d);
     text-decoration: none;
@@ -151,7 +181,10 @@ nav a {
     justify-content: space-between; 
     height: 100%; 
 }
-
+.card-herois:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(58, 188, 197, 0.6);
+}
 .herois-cabecalho{
     text-align: center;
 }
@@ -185,6 +218,7 @@ ul {
   gap: 30px;
   margin-bottom: 30px;
   flex: 1;
+  padding: 20px;
 }
 
 .cards02-hoje {
@@ -193,6 +227,7 @@ ul {
   gap: 30px;
   margin-bottom: 30px;
   flex: 1;
+  padding: 20px;
 }
 
 .cards-hoje img {
@@ -229,6 +264,14 @@ ul {
     border-radius: 15px;
 }
 
+.sobre-conteudo a:hover {
+    background-color: rgba(255, 217, 0, 0.863);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
 .rodape header{
 background-color: black;
   display: flex;
@@ -253,14 +296,21 @@ background-color: black;
   margin-left: 15px;
   text-decoration: none;
 }
+.rodape a:hover {
+    color: deeppink;
+    transform: translateY(-2px);
+}
 
 .img-gravity {
     width: 100%;
     max-width: 600px;
     height: auto;
     object-fit: cover;
-    border-radius: 15px;
     display: flex;
+    padding-top: 30px;
+    padding-block-start: 0px;
+    margin-left: 20px;
+    
 }
 .img-simpsons {
     width: 100%;
@@ -269,6 +319,10 @@ background-color: black;
     object-fit: cover;
     border-radius: 15px;
     display: flex;
+    padding-top: 30px;
+    padding-block-start: 0px;
+    margin-right: 20px;
+    
 }
 .img-xmen {
     width: 100%;
@@ -277,6 +331,10 @@ background-color: black;
     object-fit: cover;
     border-radius: 15px;
     display: flex;
+    padding-top: 30px;
+    padding-block-start: 0px;
+    margin-left: 20px;
+    
 }
 .img-kamen {
     width: 100%;
@@ -335,4 +393,122 @@ background-color: black;
     justify-content: flex-end;
     align-items: end;
 }
-.
+
+.hoje-conteudo {
+    background-color: #0b111e; 
+    color: #ffffff;
+    padding: 40px;
+}
+
+.hoje-cabecalho {
+    margin-bottom: 40px;
+}
+
+.hoje-cabecalho .p {
+    color: #38bdf8;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.hoje-cabecalho h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
+.hoje-cabecalho p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+.hoje-textos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.hoje-textos article {
+    display: grid;
+    align-items: center;
+    column-gap: 40px; 
+    row-gap: 4px;  
+}
+
+
+.hoje-textos li:nth-child(odd) article {
+    grid-template-columns: 380px 1fr;
+    grid-template-areas: 
+        "imagem numero"
+        "imagem categoria"
+        "imagem titulo";
+}
+
+
+.hoje-textos li:nth-child(even) article {
+    grid-template-columns: 1fr 380px;
+    grid-template-areas: 
+        "numero imagem"
+        "categoria imagem"
+        "titulo imagem";
+}
+
+
+.hoje-textos article img {
+    grid-area: imagem;
+    width: 380px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.hoje-textos article h1 {
+    grid-area: numero;
+    color: #ff2a75;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+}
+
+.hoje-textos article p {
+    grid-area: categoria;
+    color: #00d2ff;
+    
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.hoje-textos article h3 {
+    grid-area: titulo;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.hoje-cabecalho .p {
+    color: #00d2ff;
+    font-size: 0.85rem;
+}
+
+.hoje-cabecalho h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+} 
+.hoje-conteudo li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 210, 255, 0.25);
+}
+
+.hoje-conteudo li:hover img {
+    transform: scale(1.02);
+}
