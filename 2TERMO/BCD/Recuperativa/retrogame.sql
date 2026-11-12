@@ -160,7 +160,7 @@ from jogo;
 
 
 -- 18. INNER JOIN
-select l.id_locacao, c.nome as cliente, j.titulo as jogo, l.data_retirada, l.status_locacao
+select l.id_locacao, c.nome, j.titulo, l.data_retirada, l.status_locacao
 from locacao as l 
 inner join cliente as c
 on c.id_cliente = l.id_cliente
@@ -168,8 +168,81 @@ inner join jogo as j
 on j.id_jogo = l.id_jogo;
 
 --19. JOIN + WHERE
-select l.id_locacao as id_locacao, c.nome as cliente, j.titulo as jogo, l.data_retirada as data_retirada, l.status_locacao as status
-from localizacao l
+select l.id_locacao, c.nome, j.titulo, l.data_retirada , l.status_locacao 
+from locacao l
 inner join cliente c on l.id_cliente = c.id_cliente
 inner join jogo j on l.id_jogo = j.id_jogo
 where l.status_locacao = 'ABERTO';
+
+-- 20. GROUP BY
+select c.nome, count(l.id_locacao)as quantidade_locacoes
+from cliente c
+inner join locacao l on l.id_cliente = c.id_cliente
+group by c.id_cliente, c.nome
+order by quantidade_locacoes desc, c.nome asc;
+
+-- 21. LEFT JOIN
+select c.nome, count(l.id_locacao) as quantidade_locacoes
+from cliente c
+left join locacao l on l.id_cliente = c.id_cliente
+group by c.id_cliente, c.nome
+order by c.nome asc;
+
+
+-- Fase 4 - TCL: Transações e integridade (20 pontos)
+
+--22. Transação de locação
+
+START TRANSACTION;
+insert into locacao (data_retirada, data_prevista, data_devolucao, status_locacao,id_cliente, id_jogo) values
+(NOW(), '2026-12-11', null, 'ABERTO',4,4);
+update jogo
+set quantidade_disponivel = quantidade_disponivel - 1
+where id_jogo = 4;
+SELECT * FROM locacao;
+SELECT *FROM jogo;
+COMMIT;
+
+
+--23. ROLLBACK
+
+START TRANSACTION;
+insert into locacao (data_retirada, data_prevista, data_devolucao, status_locacao,id_cliente, id_jogo) values
+(NOW(), '2026-12-11', null, 'ABERTO',1,5);
+update jogo
+set quantidade_disponivel = quantidade_disponivel - 1
+where id_jogo = 5;
+SELECT * FROM locacao;
+SELECT *FROM jogo;
+ROLLBACK;
+COMMIT;
+
+--24. SAVEPOINT
+
+START TRANSACTION;
+UPDATE jogo
+SET quantidade_disponivel = quantidade_disponivel - 1
+WHERE id_jogo = 2;
+SAVEPOINT reajustes_retrogame;
+UPDATE jogo
+SET quantidade_disponivel = quantidade_disponivel - 1
+WHERE id_jogo = 3;
+ROLLBACK TO SAVEPOINT reajustes_retrogame;
+SELECT * FROM jogo WHERE id_jogo IN (1, 3);
+COMMIT;
+
+--25. Transação de devolução
+
+SELECT * FROM locacao;
+SELECT*FROM jogo;
+
+START TRANSACTION;
+UPDATE locacao
+set status_locacao = 'DEVOLVIDO',
+data_devolucao = '2026-10-15'
+where id_locacao = 4;
+UPDATE jogo
+set  quantidade_disponivel = quantidade_disponivel + 1
+where id_jogo = 5;
+COMMIT;
+
