@@ -1,4 +1,4 @@
--- Active: 1788519247415@@127.0.0.1@3306@biblioteca_livia_som02
+-- Active: 1794484916109@@127.0.0.1@3306@mysql
 
 ------------------------------ SOMATIVA BANCO DE DADOS - 30/10/2026 ---------------------------------
 
@@ -131,7 +131,7 @@ Where id_usuario = 4
 select * from livro;
 
 update livro
-SET quantidade_disponivel = 6
+SET quantidade_disponivel = quantidade_disponivel + 2
 Where id_livro = 6
 
 -- 11. DELETE e integridade — 4 pts

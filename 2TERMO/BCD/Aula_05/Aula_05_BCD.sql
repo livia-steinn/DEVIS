@@ -1,3 +1,4 @@
+-- Active: 1794484916109@@127.0.0.1@3306@mysql
 -- comando para criar banco de dados
 -- 1 --
 create database clinica_medica;

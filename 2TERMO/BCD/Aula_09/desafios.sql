@@ -1,9 +1,12 @@
+-- Active: 1794484916109@@127.0.0.1@3306@mysql
 -- ============================================================
 -- AULA 08 - ATIVIDADE PRÁTICA DE DML
 -- Nome: Lívia Stein Pereira
 -- Turma: A Data: 02/10/2026
 -- Base: smartcoffee_dml
 -- ============================================================
+
+CREATE DATABASE IF NOT EXISTS smartcoffee_dml_livia;
 USE smartcoffee_dml_livia;
 
 -- IMPORTANTE:
