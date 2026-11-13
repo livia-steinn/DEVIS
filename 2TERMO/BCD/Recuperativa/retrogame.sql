@@ -246,3 +246,4 @@ set  quantidade_disponivel = quantidade_disponivel + 1
 where id_jogo = 5;
 COMMIT;
 
+-- ANÁLISE TÉCNICA 
