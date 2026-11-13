@@ -1,0 +1,144 @@
+:root{
+    /* color: var(--cinza-claro); */
+    /* Paleta de cores: */
+    --cinza: #9595cf;
+    --cinza-claro: #eeeaea;
+    --Azul-marinho: #111049;
+    --Azul-bebe: #9ccbe0b7;
+    --branco: #FFFFFF;
+    --texto: #1E140F;
+}
+
+body{
+    background-color: var(--cinza-claro);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 6px solid var(--Azul-marinho);
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho{
+    background-color: var(--Azul-marinho);
+    color: var(--branco);
+    margin: 15px;
+}
+
+.texto-cabecalho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav{
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav a{
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.inicio{
+    background-color: var(--Azul-bebe);
+    margin: 15px;
+}
+
+.texto-inicio{
+    text-align: center;
+}
+
+.itens-inicio{
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.botao-inicio{
+    padding: 4px;
+    margin: 10px;
+    background-color: var(--Azul-marinho);
+    color: var(--branco);
+    border-radius: 5px;
+}
+
+.atracoes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 15px;
+}
+
+.card-1{
+    background-color: var(--branco);
+    border: 1px solid var(--cinza);
+    text-align: center;
+}
+.card-2{
+    background-color: var(--branco);
+    border: 1px solid var(--cinza);
+    text-align: center;
+}
+.card-3{
+    background-color: var(--branco);
+    border: 1px solid var(--cinza);
+    text-align: center;
+}
+.card-4{
+    background-color: var(--branco);
+    border: 1px solid var(--cinza);
+    text-align: center;
+}
+.card-5{
+    background-color: var(--branco);
+    border: 1px solid var(--cinza);
+    text-align: center;
+}
+.card-6{
+    background-color: var(--branco);
+    border: 1px solid var(--cinza);
+    text-align: center;
+}
+
+.informacoes{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px;
+}
+
+.programacao{
+    background-color: var(--branco);
+    border: 1px solid var(--cinza);
+    text-align: center;
+}
+
+.sobre{
+    background-color: var(--branco);
+    border: 1px solid var(--cinza);
+    text-align: center;
+}
+
+.rodape{
+    background-color: var(--Azul-marinho);
+    color: var(--branco);
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-rodape{
+    list-style: none;
+}
+
+.nav-rodape a{
+    color: var(--branco);
+    text-decoration: none;
+}
+
