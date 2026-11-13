@@ -41,17 +41,23 @@ body{
 }
 
 .inicio{
+    display: flex;
     background-color: var(--Azul-bebe);
     margin: 15px;
+    align-items: center;
 }
 
 .texto-inicio{
     text-align: center;
 }
 
-.itens-inicio{
+
+.imagem-inicio{
     display: flex;
     justify-content: center;
+    max-width: 60%;
+    height: auto;
+    align-items: center;
 }
 
 img {
@@ -60,11 +66,12 @@ img {
 }
 
 .botao-inicio{
-    padding: 4px;
+    padding: 10px;
     margin: 10px;
     background-color: var(--Azul-marinho);
     color: var(--branco);
     border-radius: 5px;
+
 }
 
 .atracoes{
@@ -105,6 +112,21 @@ img {
     text-align: center;
 }
 
+.card-img{
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    height: fit-content;
+    align-items: center;
+}
+
+.saiba-mais{
+    text-decoration: none;
+    color: var(--branco);
+    background-color: var(--Azul-marinho);
+    padding: 5px;
+}
+
 .informacoes{
     display: flex;
     justify-content: center;
@@ -141,4 +163,3 @@ img {
     color: var(--branco);
     text-decoration: none;
 }
-
