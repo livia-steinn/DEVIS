@@ -62,7 +62,6 @@ begin
     ORDER BY nome;
 END
 DELIMITER;
-
 call buscar_produtos_categoria(3);
 
 -- EX 4 : PARÂMETRO OUT - devolve um valor através de uma variável do cliente
@@ -237,3 +236,5 @@ show PROCEDURE status; -- listar procedures
 show create PROCEDURE nome_procedure; -- mostrar a definição de um procedure
 drop procedure nome_procedure; -- apagar ou remover procedure
 drop procedure if exists nome_procedures; -- remover somente se existir
+
+
