@@ -237,3 +237,79 @@ where id_produto = 1;
 select * from auditoria_preco
 order by id_auditoria desc;
 
+-- Obs. Boa pratica - sempre mostre o estado antes(before), execute a mudança e depois consulte o estado depois(after)
+--BEFORE antes de gravar validar estoque negativo
+-- AFTER depois de gravar registrar historico/auditoria
+--INSERT (old não) (new sim)
+-- UPDATE (old sim) (new sim)
+-- Delete (old sim) (new não)
+
+
+--EX 2 : Validação automática com signal 
+delimiter$$
+create trigger trg_estoque_before_update
+before update on estoque
+for each row
+begin
+    if new.quantidade < 0 THEN
+        signal sqlstate '45000'
+        set message_text ='Estoque não pode ficar negativo!!';
+    end if;
+end $$
+delimiter;
+
+select * from estoque;
+insert into estoque (id_produto, quantidade) VALUES
+(2, '-6 x');
+
+-- EX 3 : Before Insert - antes de inserir dados
+
+delimiter$$
+create trigger trg_produto_before_instant
+before insert on produto
+for each row 
+begin
+    if new.preco <= 0 THEN
+        signal sqlstate '45000'
+        set MESSAGE_TEXT = 'Preço deve ser maior que zero';
+    end if;
+end$$
+delimiter;
+
+select * from produto;
+insert into produto (id_categoria, nome, preco, ativo) VALUES
+(1, 'Chocolate Quente', '-2.00', true);
+
+--EX 4 : exclusão de registro - AFTER DELETE
+create table log_exclusao_produto
+(
+    id_log int auto_increment,
+    id_produto int,
+    nome_produto varchar(120),
+    excluido_em datetime default CURRENT_TIMESTAMP,
+    constraint pk_id_log primary key (id_log),
+    constraint fk_produto_id FOREIGN key (id_produto) REFERENCES produto(id_produto)
+);
+delimiter$$
+create trigger trg_produto_afrter_delete
+after delete on produto
+for each row
+begin
+    insert into log_exclusao_produto(id_produto, nome_produto)
+    values(old.id_produto, old.nome);
+end$$
+delimiter;
+
+select*from log_exclusao_produto;
+insert into log_exclusao_produto(id_produto, nome_produto) values
+(1, 'TESTE')
+
+delete from log_exclusao_produto 
+where id_log = 1;
+
+-- Como gerenciar
+show triggers;
+
+show CREATE TRIGGER nome_trigger;
+
+drop Trigger if exists nome_trigger;
